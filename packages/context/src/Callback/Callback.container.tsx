@@ -5,7 +5,7 @@ import {
   oidcLog,
   Callback,
   ReactOidcHistory,
-} from '@axa-fr/react-oidc-core';
+} from '@niemen/react-oidc-core';
 import { User, UserManager } from 'oidc-client';
 import withServices from '../withServices';
 

@@ -16,7 +16,7 @@ import {
   configurationDefaultProps,
   ReactOidcHistory,
   UserStoreType,
-} from '@axa-fr/react-oidc-core';
+} from '@niemen/react-oidc-core';
 import { User } from 'oidc-client';
 
 import { Callback } from '../Callback';

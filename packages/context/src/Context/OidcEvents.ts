@@ -1,5 +1,5 @@
 import { Dispatch } from 'react';
-import { oidcLog, authenticateUser, logoutUser, ReactOidcHistory } from '@axa-fr/react-oidc-core';
+import { oidcLog, authenticateUser, logoutUser, ReactOidcHistory } from '@niemen/react-oidc-core';
 import { User, UserManager, UserManagerEvents } from 'oidc-client';
 
 export interface OidcState {

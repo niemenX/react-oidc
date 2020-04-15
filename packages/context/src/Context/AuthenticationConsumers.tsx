@@ -7,7 +7,7 @@ import {
   isRequireAuthentication,
   oidcLog,
   ReactOidcHistory,
-} from '@axa-fr/react-oidc-core';
+} from '@niemen/react-oidc-core';
 import withServices from '../withServices';
 import { AuthenticationContext } from './AuthenticationContext.container';
 
