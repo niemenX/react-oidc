@@ -16,6 +16,6 @@
     }
   },
   "packages": [
-    "packages/core"
+    "packages/context"
   ]
 }
