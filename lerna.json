@@ -1,5 +1,5 @@
 {
-  "version": "3.0.8",
+  "version": "1.0.0",
   "command": {
     "publish": {
       "message": "chore(release): publish %s ***NO_CI***",
@@ -16,7 +16,7 @@
     }
   },
   "packages": [
-    "examples/**/*",
-    "packages/*"
+    "packages/core",
+    "packages/context"
   ]
 }

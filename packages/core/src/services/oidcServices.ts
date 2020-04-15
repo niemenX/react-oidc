@@ -24,7 +24,7 @@ export const authenticateUser = (
     return;
   }
   numberAuthentication++;
-  const url = callbackPath || location.pathname + (location.search || '');
+  const url = callbackPath || window.location.pathname + (window.location.search || '');
 
   if (isRequireSignin(oidcUser, isForce)) {
     oidcLog.info('authenticate user...');
