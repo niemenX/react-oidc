@@ -8,7 +8,9 @@ interface SilentCallbackProps {
 
 const SilentCallback: FC<SilentCallbackProps> = ({ logger }) => {
   useEffect(() => {
-    new UserManager({}).signinSilentCallback();
+    new UserManager({}).signinSilentCallback().catch((error: Error) => {
+      new UserManager({}).signinRedirect();
+    });
     logger.info('callback silent signin successfull');
   });
 
