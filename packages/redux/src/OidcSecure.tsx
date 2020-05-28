@@ -31,7 +31,7 @@ const AuthenticationLiveCycle: FC<AuthenticationLiveCycleProps> = ({
   useEffect(() => {
     if (isShouldAuthenticate) {
       const userManager = getUserManager();
-      authenticateUser(userManager, location, history, user)(true);
+      authenticateUser(userManager, location, history, user)();
     }
   }, [isShouldAuthenticate, location, user]);
 

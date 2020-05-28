@@ -33,9 +33,13 @@ export const authenticateUser = (
     userRequested = false;
   } else if (oidcUser && oidcUser.expired) {
     userRequested = true;
+    oidcLog.warn('user requested');
     try {
       await userManager.signinSilent();
+      oidcLog.warn('silent call');
     } catch (error) {
+      oidcLog.warn(error);
+      oidcLog.warn(numberAuthentication);
       if (numberAuthentication <= 1) {
         await userManager.signinRedirect({ data: { url } });
       } else {
