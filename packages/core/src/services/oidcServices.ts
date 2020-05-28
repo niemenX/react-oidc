@@ -26,6 +26,12 @@ export const authenticateUser = (
   numberAuthentication++;
   const url = callbackPath || window.location.pathname + (window.location.search || '');
 
+  oidcLog.warn(`====================`);
+  oidcLog.warn(oidcUser);
+  oidcLog.warn(isForce);
+  oidcLog.warn(oidcUser.expired);
+  oidcLog.warn(`====================`);
+
   if (isRequireSignin(oidcUser, isForce)) {
     oidcLog.info('authenticate user...');
     userRequested = true;
@@ -49,6 +55,9 @@ export const authenticateUser = (
       }
     }
     userRequested = false;
+  } else {
+    oidcLog.warn('user missing');
+    await userManager.signinRedirect({ data: { url } });
   }
 };
 
